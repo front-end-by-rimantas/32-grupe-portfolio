@@ -49,39 +49,61 @@
 /* hero end */
 
 /* about me start */
+
 .photo-border {
     --border-width: 15px;
-    border: var(--border-width) solid #eee;
-    border-radius: calc(var(--border-width) / 2);
     position: relative;
     max-height: 550px;
 }
-.my-photo-hidden {
-    width: 100%;
-    visibility: hidden;
+.photo-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: var(--border-width) solid #eee;
+    border-radius: calc(var(--border-width) / 2);
 }
 .my-photo {
-    width: calc(100% + var(--border-width) * 2);
-    height: calc(100% + var(--border-width) * 2);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    max-height: inherit;
+    position: relative;
     object-fit: contain;
     object-position: left;
 }
 
-.about {
+.about-me {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
 }
-.about > .profession {
+.about-me > .profession {
     font-weight: 600;
 }
-.about > img {
+.about-me > img {
     height: 30px;
+}
+
+@media (max-width: 768px) {
+    .about-me > h2 {
+        margin-top: 1em;
+    }
+}
+@media (min-width: 768px) {
+    .about > .row {
+        display: flex;
+        align-items: center;
+    }
+    .about-me {
+        padding-left: 20px;
+    }
+}
+@media (min-width: 992px) {
+    .about-me {
+        padding-left: 50px;
+    }
 }
 /* about me end */
 
