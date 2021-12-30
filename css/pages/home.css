@@ -49,6 +49,18 @@
 /* hero end */
 
 /* about me start */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+.about > .profession {
+    font-weight: 600;
+}
+.about > img {
+    height: 30px;
+}
 /* about me end */
 
 /* hobbies start */
