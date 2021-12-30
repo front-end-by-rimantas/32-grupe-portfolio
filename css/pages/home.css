@@ -49,6 +49,62 @@
 /* hero end */
 
 /* about me start */
+
+.photo-border {
+    --border-width: 15px;
+    position: relative;
+    max-height: 550px;
+}
+.photo-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: var(--border-width) solid #eee;
+    border-radius: calc(var(--border-width) / 2);
+}
+.my-photo {
+    width: 100%;
+    max-height: inherit;
+    position: relative;
+    object-fit: contain;
+    object-position: left;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+.about-me > .profession {
+    font-weight: 600;
+}
+.about-me > img {
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+    .about-me > h2 {
+        margin-top: 1em;
+    }
+}
+@media (min-width: 768px) {
+    .about > .row {
+        display: flex;
+        align-items: center;
+    }
+    .about-me {
+        padding-left: 20px;
+    }
+}
+@media (min-width: 992px) {
+    .about-me {
+        padding-left: 50px;
+    }
+}
 /* about me end */
 
 /* hobbies start */
