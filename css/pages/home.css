@@ -49,6 +49,28 @@
 /* hero end */
 
 /* about me start */
+.photo-border {
+    --border-width: 15px;
+    border: var(--border-width) solid #eee;
+    border-radius: calc(var(--border-width) / 2);
+    position: relative;
+    max-height: 550px;
+}
+.my-photo-hidden {
+    width: 100%;
+    visibility: hidden;
+}
+.my-photo {
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    object-position: left;
+}
+
 .about {
     display: flex;
     flex-direction: column;
