@@ -74,7 +74,10 @@ p {
 }
 
 .section-title {
-    margin-bottom: 50px;
+    --border-size: 3px;
+    --bottom-height: 20px;
+    --circle-size: 12px;
+    margin-bottom: calc(var(--bottom-height) * 2);
     text-transform: uppercase;
     font-weight: 600;
     position: relative;
@@ -83,12 +86,15 @@ p {
 .section-title::after {
     content: '';
     display: block;
-    width: 12px;
-    height: 12px;
+    width: var(--circle-size);
+    height: var(--circle-size);
     border-radius: 50% 50% 50% 0;
-    border: 3px solid var(--primary-color);
+    border: var(--border-size) solid var(--primary-color);
     position: absolute;
-    bottom: -27.5px;
+    bottom: calc(
+        ((var(--border-size) + var(--circle-size)) / 2 + var(--bottom-height)) *
+            -1
+    );
     left: 50%;
     transform: translateX(-95%) rotate(45deg);
 }
@@ -100,16 +106,18 @@ p {
 .section-title > .line::after {
     content: '';
     display: block;
-    width: 30px;
-    height: 3px;
+    width: calc(var(--circle-size) * 2);
+    height: var(--border-size);
     position: absolute;
-    bottom: -20px;
+    bottom: calc(var(--bottom-height) * -1);
     left: 50%;
     background-color: var(--primary-color);
-    transform: translateX(calc(-100% - 18px));
+    transform: translateX(
+        calc(-100% - var(--circle-size) - 2 * var(--border-size))
+    );
 }
 .section-title > .line::after {
-    transform: translateX(18px);
+    transform: translateX(calc(var(--circle-size) + 2 * var(--border-size)));
 }
 .section-description {
     color: #888;
