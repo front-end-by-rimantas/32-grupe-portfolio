@@ -1,0 +1,29 @@
+.hobbies {
+    display: grid;
+    gap: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.hobbie {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    line-height: 50px;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+.hobbie > i {
+    width: 50px;
+    text-align: center;
+    line-height: inherit;
+    border-right: 1px solid #ccc;
+}
+.hobbie > span {
+    width: calc(100% - 50px);
+}
+.hobbie:hover {
+    box-shadow: 0 5px 10px 7px #0002;
+    transform: translateY(-5px);
+}
+.hobbie:hover > i {
+    color: red;
+}

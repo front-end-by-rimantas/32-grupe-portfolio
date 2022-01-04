@@ -1,0 +1,23 @@
+.achievements-block {
+    padding: 10px;
+}
+.achievements {
+    background-image: url(../../img/achievements/bg-counter.jpg);
+    /* background-size: cover; */
+    background-position: center;
+    border-radius: 10px;
+}
+.achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+}
+.achievement > i {
+    color: var(--primary-color);
+    font-size: 30px;
+}
+.achievement > .count {
+    font-size: 30px;
+}
