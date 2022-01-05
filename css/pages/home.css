@@ -164,6 +164,16 @@
 /* freelancer end */
 
 /* contact me start */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+.contact > .icon {
+    font-size: 30px;
+}
 /* contact me end */
 
 /* footer start */
