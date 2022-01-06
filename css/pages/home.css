@@ -10,6 +10,8 @@
 @import '../components/button.css';
 @import '../components/header.css';
 @import '../components/hobbies.css';
+@import '../components/progress-bar.css';
+@import '../components/progress-bar-group.css';
 
 /* CUSTOM STYLE GOES BELOW THIS COMMENT LINE */
 
@@ -122,6 +124,19 @@
 /* work end */
 
 /* expertise start */
+.expertise {
+    background-size: 35% auto;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 992px) {
+    .expertise {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background-image: url(../../img/work/skills.jpg);
+    }
+}
 /* expertise end */
 
 /* portfolio start */
@@ -134,9 +149,31 @@
 /* blog end */
 
 /* freelancer start */
+.freelancer-block {
+    padding: 10px;
+}
+.freelancer {
+    background-image: url(../../img/freelancer/hireme.jpg);
+    /* background-size: cover; */
+    background-position: center;
+    border-radius: 10px;
+}
+.freelancer-block .btn {
+    margin-top: 2em;
+}
 /* freelancer end */
 
 /* contact me start */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+.contact > .icon {
+    font-size: 30px;
+}
 /* contact me end */
 
 /* footer start */
