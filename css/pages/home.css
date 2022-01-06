@@ -8,6 +8,7 @@
 /* components */
 @import '../components/achievements.css';
 @import '../components/button.css';
+@import '../components/form.css';
 @import '../components/header.css';
 @import '../components/hobbies.css';
 @import '../components/progress-bar.css';

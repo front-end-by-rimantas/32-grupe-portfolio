@@ -1,0 +1,76 @@
+.form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'name'
+        'email'
+        'subj'
+        'msg'
+        'btn';
+    align-content: start;
+    font-size: 18px;
+}
+.form > .form-group {
+    display: grid;
+    align-items: start;
+    font-size: inherit;
+}
+.form > .form-group[data-group='name'] {
+    grid-area: name;
+}
+.form > .form-group[data-group='email'] {
+    grid-area: email;
+}
+.form > .form-group[data-group='subj'] {
+    grid-area: subj;
+}
+.form > .form-group[data-group='msg'] {
+    grid-area: msg;
+}
+.form > .form-group[data-group='btn'] {
+    grid-area: btn;
+}
+.form > .form-group > label {
+    display: none;
+}
+.form > .form-group > input,
+.form > .form-group > textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.form > .form-group > textarea {
+    min-height: 100px;
+    max-height: 300px;
+    resize: vertical;
+}
+.form > .form-group > .btn {
+    justify-self: end;
+}
+
+@media (min-width: 768px) {
+    .form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'name email'
+            'subj subj'
+            'msg msg'
+            'btn btn';
+    }
+}
+
+@media (min-width: 992px) {
+    .form {
+        grid-template-rows: 44px 44px auto 44px;
+        grid-template-areas:
+            'name msg'
+            'email msg'
+            'subj msg'
+            'btn btn';
+    }
+    .form > .form-group > textarea {
+        min-height: 172px;
+    }
+}
